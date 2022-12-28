@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "aboutfx"
+version = "1.0.0"
+description = ""
+authors = ["mkpaz <quizynox@gmail.com>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "~1.23.5"
+matplotlib = "^3.6.2"
+seaborn = "^0.12.1"
+pandas = "^1.5.2"
+pywaffle = "^1.1.0"
+
+[tool.poetry.scripts]
+fetch_github = "src.fetch_github:start"
+plot_git = "src.plot_git:start"
+plot_github = "src.plot_github:start"
+plot_jbs = "src.plot_jbs:start"
+plot_mail = "src.plot_mail:start"
+plot_other = "src.plot_other:start"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
