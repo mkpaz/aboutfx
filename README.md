@@ -214,77 +214,103 @@ And just some stats to show that the project development is still quite active.
 
 This is an excerpt of the most interesting recent features from the JavaFX **[release notes](https://github.com/openjdk/jfx/tree/master/doc-files)** and the list of **[pull requests](https://github.com/openjdk/jfx/pulls)**.
 
-- `(JFX17)` [Loading stylesheets from data-URIs](https://github.com/openjdk/jfx/pull/536)
-  Adds support for the data-URI scheme to load stylesheets embedded into code or FXML files. This can be useful for small applications that would otherwise need to deploy their stylesheets alongside the application. It can also be useful to dynamically generate and add stylesheets to applications without deploying temporary files on disk. Usage example:
-  ```java
-  node.getStylesheets().add("data:base64," + new String(Base64.getEncoder().encode(YOUR_CSS.getBytes()), UTF_8));
-  ```
-- `(JFX17)` [Loading images from inline data-URIs](https://github.com/openjdk/jfx/pull/508)
-  Adds support for loading images from inline data URIs, which is also widely supported by web browsers. This enables developers to package small images directly in CSS files, rather than separately deploying the images alongside the CSS file. Usage example:
-  ```css
-  .foo {
-      -fx-background-image: url("data:image/png;base64,BASE64_STRING");
-  }
-  ```
-- `(JFX17)` [API to query states of CAPS LOCK and NUM LOCK keys](https://github.com/openjdk/jfx/pull/385)
-    Being able to read the lock state would allow an application to inform the user that caps lock was enabled for passwords or other usages where the keyboard input might not be echoed. It would also allow an application to do spell checking / auto-correction that might ordinarily be skipped when typing all upper-case letters. Usage example: simply check the new `Platform#isKeyLocked(KeyCode)` method.
-- `(JFX18)` [CSS-styleable Node.managed property](https://github.com/openjdk/jfx/pull/602)
-   A common design pattern is to not only make objects invisible, but also let other components use the freed space. With JavaFX this can be achieved by modifying CSS using node `{ visible: false; -fx-min-width: 0; -fx-pref-width: 0; }`. From now on, it can be done simpler by node `{ visible: false; -fx-managed: false; }`.
-- `(JFX18)` [Transparent backgrounds in WebView](https://github.com/openjdk/jfx/pull/563)
-    Allows a `WebView` to be created with a transparent background, so that HTML content can be rendered over something else.
-- `(JFX19)` [:focus-visible and :focus-within CSS pseudo-classes](https://bugs.openjdk.org/browse/JDK-8268225)
-   The W3C CSS Selectors Level 4 specification defines three focus-related pseudo-classes: "focus", which applies to a node that currently accepts keyboard or mouse input; ["focus-visible"](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible), which applies to a focused node that visibly indicates focus, and ["focus-within"](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-within), which applies to a focused node and any of its parents. Check MDN examples to understand how it works.
-- `(JFX19)` [Map, FlatMap and OrElse fluent bindings for ObservableValue](https://github.com/openjdk/jfx/pull/675).
-  Adds support for creating derived bindings directly from ObservableValue with new API in the ObservableValue interface. Check PR for more examples.
-  ```java
-  // Standard JavaFX:
-  label.textProperty().bind(text.length().negate().add(100).asString().concat(" characters left"));
-  // Fluent: more compact and more clear
-  label.textProperty().bind(text.orElse("").map(v -> 100 - v.length() + " characters left"));
-  ```
+###### [Loading stylesheets from data-URIs](https://github.com/openjdk/jfx/pull/536) `(JFX17)`
+
+Adds support for the data-URI scheme to load stylesheets embedded into code or FXML files. This can be useful for small applications that would otherwise need to deploy their stylesheets alongside the application. It can also be useful to dynamically generate and add stylesheets to applications without deploying temporary files on disk. Usage example:
+
+```java
+node.getStylesheets().add("data:base64," + new String(Base64.getEncoder().encode(YOUR_CSS.getBytes()), UTF_8));
+```
+
+###### [Loading images from inline data-URIs](https://github.com/openjdk/jfx/pull/508) `(JFX17)`
+
+Adds support for loading images from inline data URIs, which is also widely supported by web browsers. This enables developers to package small images directly in CSS files, rather than separately deploying the images alongside the CSS file. Usage example:
+
+```css
+.foo {
+    -fx-background-image: url("data:image/png;base64,BASE64_STRING");
+}
+```
+
+###### [API to query states of CAPS LOCK and NUM LOCK keys](https://github.com/openjdk/jfx/pull/385) `(JFX17)`
+
+Being able to read the lock state would allow an application to inform the user that caps lock was enabled for passwords or other usages where the keyboard input might not be echoed. It would also allow an application to do spell checking / auto-correction that might ordinarily be skipped when typing all upper-case letters. Usage example: simply check the new `Platform#isKeyLocked(KeyCode)` method.
+
+###### [CSS-styleable Node.managed property](https://github.com/openjdk/jfx/pull/602) `(JFX18)`
+
+A common design pattern is to not only make objects invisible, but also let other components use the freed space. With JavaFX this can be achieved by modifying CSS using node `{ visible: false; -fx-min-width: 0; -fx-pref-width: 0; }`. From now on, it can be done simpler by node `{ visible: false; -fx-managed: false; }`.
+
+###### [Transparent backgrounds in WebView](https://github.com/openjdk/jfx/pull/563) `(JFX18)`
+
+Allows a `WebView` to be created with a transparent background, so that HTML content can be rendered over something else.
+
+###### [:focus-visible and :focus-within CSS pseudo-classes](https://bugs.openjdk.org/browse/JDK-8268225) `(JFX19)`
+
+The W3C CSS Selectors Level 4 specification defines three focus-related pseudo-classes: "focus", which applies to a node that currently accepts keyboard or mouse input; ["focus-visible"](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible), which applies to a focused node that visibly indicates focus, and ["focus-within"](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-within), which applies to a focused node and any of its parents. Check MDN examples to understand how it works.
+
+###### [Map, FlatMap and OrElse fluent bindings for ObservableValue](https://github.com/openjdk/jfx/pull/675) `(JFX19)`
+
+Adds support for creating derived bindings directly from ObservableValue with new API in the ObservableValue interface. Check PR for more examples.
+
+```java
+// Standard JavaFX:
+label.textProperty().bind(text.length().negate().add(100).asString().concat(" characters left"));
+// Fluent: more compact and more clear
+label.textProperty().bind(text.orElse("").map(v -> 100 - v.length() + " characters left"));
+```
 
 #### Upcoming
 
-- (**integrated**) [Simplified deterministic way to manage listeners](https://github.com/openjdk/jfx/pull/830)
-  Adds a new property on `Node` which provides a boolean which indicates whether or not the `Node` is currently a part of a `Scene`. It also adds a new fluent binding method `when()` on `ObservableValue`. Now it becomes easier to break strong references that prevent garbage collection between a long lived property and one that should be shorter lived.
-  ```java
-  // the label is eligible for GC immediately after it stops showing as the listener
-  // on longLivedProperty is removed when the provided condition is false
-  label.textProperty().bind(longLivedProperty.when(label::isShowingProperty))
+###### [Simplified deterministic way to manage listeners](https://github.com/openjdk/jfx/pull/830) (integrated)
+
+Adds a new property on `Node` which provides a boolean which indicates whether or not the `Node` is currently a part of a `Scene`. It also adds a new fluent binding method `when()` on `ObservableValue`. Now it becomes easier to break strong references that prevent garbage collection between a long lived property and one that should be shorter lived.
+
+```java
+// the label is eligible for GC immediately after it stops showing as the listener
+// on longLivedProperty is removed when the provided condition is false
+label.textProperty().bind(longLivedProperty.when(label::isShowingProperty))
+```
+
+###### [CSS themes as a first-class concept](https://github.com/openjdk/jfx/pull/511)
+
+The new theming API in `javafx.graphics` that provides a basic framework to support application-wide style themes. Usage example:
+
+```java
+Application.setStyleTheme(() -> List.of("stylesheet1.css", "stylesheet2.css");
+// or
+Application.setStyleTheme(new ModenaTheme() {{
+    addFirst("stylesheet1.css");
+    addLast("stylesheet2.css");
+}});
   ```
-- [CSS themes as a first-class concept](https://github.com/openjdk/jfx/pull/511)
-  The new theming API in `javafx.graphics` that provides a basic framework to support application-wide style themes. Usage example:
-  ```java
-  Application.setStyleTheme(() -> List.of("stylesheet1.css", "stylesheet2.css");
-  // or
-  Application.setStyleTheme(new ModenaTheme() {{
-        addFirst("stylesheet1.css");
-        addLast("stylesheet2.css");
-  }});
-  ```
-- [Additional constrained resize policies for Tree/TableView](https://github.com/openjdk/jfx/pull/897)
-  Replaces old column resize algorithm with a different one, which not only honors all the constraints when resizing, but also provides 4 different resize modes similar to JTable: `AUTO_RESIZE_NEXT_COLUMN`,`AUTO_RESIZE_SUBSEQUENT_COLUMNS`, `AUTO_RESIZE_LAST_COLUMN`, `AUTO_RESIZE_ALL_COLUMNS`.
+
+###### [Additional constrained resize policies for Tree/TableView](https://github.com/openjdk/jfx/pull/897)
+
+Replaces old column resize algorithm with a different one, which not only honors all the constraints when resizing, but also provides 4 different resize modes similar to JTable: `AUTO_RESIZE_NEXT_COLUMN`,`AUTO_RESIZE_SUBSEQUENT_COLUMNS`, `AUTO_RESIZE_LAST_COLUMN`, `AUTO_RESIZE_ALL_COLUMNS`.
 
 #### Drafts
 
-- [Undecorated interactive stage style](https://github.com/openjdk/jfx/pull/594)
-  Making undecorated windows resizable is very painful. There're [number of implementations](https://stackoverflow.com/questions/19455059/allow-user-to-resize-an-undecorated-stage) and none of them work good. The PR introduces `StageStyle.UNDECORATED_INTERACTIVE` which is similar to `StageStyle.UNDECORATED`, but adds platform-specific interactions to the window. For all platforms, this includes move and resize behaviors. On Windows, it also includes Aero behaviors (snap to screen edges, dock at top to maximize, etc.).
-- [CSS transitions](https://github.com/openjdk/jfx/pull/870)
-  Introduces CSS transitions, which specify how a property changes its value smoothly from one value to another.
-  ```css
-  .button {
-    -fx-background-color: dodgerblue;
-  }
-  .button:hover {
-    -fx-background-color: red;
-    -fx-scale-x: 1.1;
-    -fx-scale-y: 1.1;
+###### [Undecorated interactive stage style](https://github.com/openjdk/jfx/pull/594)
 
-    transition: -fx-background-color 0.5s ease,
-                -fx-scale-x 0.5s ease,
-                -fx-scale-y 0.5s ease;
-  }
-  ```
+Making undecorated windows resizable is very painful. There're [number of implementations](https://stackoverflow.com/questions/19455059/allow-user-to-resize-an-undecorated-stage) and none of them work good. The PR introduces `StageStyle.UNDECORATED_INTERACTIVE` which is similar to `StageStyle.UNDECORATED`, but adds platform-specific interactions to the window. For all platforms, this includes move and resize behaviors. On Windows, it also includes Aero behaviors (snap to screen edges, dock at top to maximize, etc.).
+
+###### [CSS transitions](https://github.com/openjdk/jfx/pull/870)
+
+Introduces CSS transitions, which specify how a property changes its value smoothly from one value to another.
+```css
+.button {
+-fx-background-color: dodgerblue;
+}
+.button:hover {
+-fx-background-color: red;
+-fx-scale-x: 1.1;
+-fx-scale-y: 1.1;
+
+transition: -fx-background-color 0.5s ease,
+            -fx-scale-x 0.5s ease,
+            -fx-scale-y 0.5s ease;
+}
+```
 
 ## FAQ
 
