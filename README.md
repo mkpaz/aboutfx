@@ -1,6 +1,6 @@
 # AboutFX
 
-An *unofficial GitHub repo* that sum up everything about the JavaFX project state on a single page.
+An *unofficial GitHub repo* that sums up everything about the JavaFX project state on a single page.
 
 - 🏠 [About the Project](#about-the-project)
 - 📚 [Docs and Tutorials](#docs-and-tutorials)
@@ -178,7 +178,7 @@ JavaFX uses OpenJDK bug tracker, namely [Java Bug System](https://bugs.openjdk.o
   </tr>
 </table>
 
-Now that's more interesting, the number of resolved issues by version. Unsurprisingly, LTS versions in leaders because they're still receive a backports.
+Now that's more interesting, the number of resolved issues by version. Unsurprisingly, LTS versions in leaders because they're still receiving a backports.
 
 ![no-image](./charts/jbs_fixed-issues-by-version.png)
 
@@ -216,7 +216,7 @@ This is an excerpt of the most interesting recent features from the JavaFX **[re
 
 ###### [Loading stylesheets from data-URIs](https://github.com/openjdk/jfx/pull/536) `(JFX17)`
 
-Adds support for the data-URI scheme to load stylesheets embedded into code or FXML files. This can be useful for small applications that would otherwise need to deploy their stylesheets alongside the application. It can also be useful to dynamically generate and add stylesheets to applications without deploying temporary files on disk. Usage example:
+Adds support for the data-URI scheme to load stylesheets embedded in code or FXML files. This can be useful for small applications that would otherwise need to deploy their stylesheets alongside the application. It can also be useful to dynamically generate and add stylesheets to applications without deploying temporary files on disk. Usage example:
 
 ```java
 node.getStylesheets().add("data:base64," + new String(Base64.getEncoder().encode(YOUR_CSS.getBytes()), UTF_8));
@@ -292,7 +292,7 @@ Replaces old column resize algorithm with a different one, which not only honors
 
 ###### [Undecorated interactive stage style](https://github.com/openjdk/jfx/pull/594)
 
-Making undecorated windows resizable is very painful. There're [number of implementations](https://stackoverflow.com/questions/19455059/allow-user-to-resize-an-undecorated-stage) and none of them work good. The PR introduces `StageStyle.UNDECORATED_INTERACTIVE` which is similar to `StageStyle.UNDECORATED`, but adds platform-specific interactions to the window. For all platforms, this includes move and resize behaviors. On Windows, it also includes Aero behaviors (snap to screen edges, dock at top to maximize, etc.).
+Making undecorated windows resizable is very painful. There're [number of implementations](https://stackoverflow.com/questions/19455059/allow-user-to-resize-an-undecorated-stage) but none of them work well. The PR introduces `StageStyle.UNDECORATED_INTERACTIVE` which is similar to `StageStyle.UNDECORATED`, but adds platform-specific interactions to the window. For all platforms, this includes move and resize behaviors. On Windows, it also includes Aero behaviors (snap to screen edges, dock at top to maximize etc).
 
 ###### [CSS transitions](https://github.com/openjdk/jfx/pull/870)
 
@@ -338,4 +338,4 @@ Almost everything. [Complex](https://pdfsam.org) [desktop](https://renatoathayde
 
 #### JavaFX is not a part of JDK anymore. Does it mean the project is abandoned?
 
-No, it doesn't. [Haven't you seen the charts?](#pulse) Critical bugs are fixed very fast and there was a number of good features since JDK 11. JavaFX [is a part of OpenJDK project](https://wiki.openjdk.org/display/OpenJFX/Main) and while some major OpenJDK providers compile JDK with JavaFX included ([Azul Zulu](https://www.azul.com/downloads/?package=jdk-fx), [BellSoft Liberica](https://bell-sw.com/pages/downloads/) [and Oracle since 20EA](https://jdk.java.net/javafx20/)) it *is* a part of OpenJDK distribution as well.
+No, it doesn't. [Haven't you seen the charts?](#pulse) Critical bugs are fixed very fast and there were a number of good features since JDK 11. JavaFX [is a part of OpenJDK project](https://wiki.openjdk.org/display/OpenJFX/Main) and while some major OpenJDK providers compile JDK with JavaFX included ([Azul Zulu](https://www.azul.com/downloads/?package=jdk-fx), [BellSoft Liberica](https://bell-sw.com/pages/downloads/) [and Oracle since 20EA](https://jdk.java.net/javafx20/)) it *is* a part of OpenJDK distribution as well.
