@@ -132,6 +132,7 @@ Tutorials for beginners:
 - [Cljfx](https://github.com/cljfx/cljfx) (Closure) ![stars](<https://shields.io/github/stars/cljfx/cljfx?style=social>)
 - [ScalaFX](https://github.com/scalafx/scalafx) (Scala) ![stars](<https://shields.io/github/stars/scalafx/scalafx?style=social>)
 - [TornadoFX](https://github.com/edvin/tornadofx) (Kotlin) ![stars](<https://shields.io/github/stars/edvin/tornadofx?style=social>)
+- [GroovyFX](https://groovyfx.org) (Groovy) ![stars](<https://shields.io/github/stars/groovyfx-project/groovyfx?style=social>)
 
 ## Pulse
 
