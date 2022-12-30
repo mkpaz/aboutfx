@@ -96,6 +96,7 @@ Tutorials for beginners:
 | [Medusa](https://github.com/HanSolo/Medusa) <br/> ![stars](<https://shields.io/github/stars/HanSolo/Medusa?style=social>) | `#controls`, `#charts`  | A library for gauges |
 | [MigPane](https://github.com/mikaelgrev/miglayout) <br/> ![stars](<https://shields.io/github/stars/mikaelgrev/miglayout?style=social>) | `#layout`  | Versatile layout manager |
 | [mvvmFX](https://github.com/sialcasa/mvvmFX) <br/> ![stars](<https://shields.io/github/stars/sialcasa/mvvmFX?style=social>) | `#framework`  | An application framework which provides necessary components to implement the MVVM pattern |
+| [OpenGLFX](https://github.com/husker-dev/openglfx) <br/> ![stars](<https://shields.io/github/stars/husker-dev/openglfx?style=social>) | `#graphics`  | OpenGL implementation for JavaFX |
 | [Open Lowcode](https://github.com/openlowcode/Open-Lowcode) <br/> ![stars](<https://shields.io/github/stars/openlowcode/Open-Lowcode?style=social>) | `#framework`  | A solution for rapid development of specific enterprise software |
 | [Orson Charts](https://github.com/jfree/orson-charts) <br/> ![stars](<https://shields.io/github/stars/jfree/orson-charts?style=social>) | `#charts`  | An interactive 3D chart library |
 | [PreferencesFX](https://github.com/dlemmermann/PreferencesFX) <br/> ![stars](<https://shields.io/github/stars/dlemmermann/PreferencesFX?style=social>) | `#framework`  | A library to easily create a UI for application settings / preferences |
