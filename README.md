@@ -103,7 +103,7 @@ Tutorials for beginners:
 | [RichTextFX](https://github.com/fxmisc/RichTextFX) <br/> ![stars](<https://shields.io/github/stars/fxmisc/RichTextFX?style=social>) | `#controls`  | A memory-efficient text area that allows to style ranges of text and display custom objects in-line |
 | [TestFX](https://github.com/TestFX/TestFX) <br/> ![stars](<https://shields.io/github/stars/TestFX/TestFX?style=social>) | `#unit-tests`  | Simple and clean testing for JavaFX |
 | [TilesFX](https://github.com/HanSolo/tilesfx) <br/> ![stars](<https://shields.io/github/stars/HanSolo/tilesfx?style=social>) | `#controls`, `#charts`  | A library containing tiles that can be used for dashboards |
-| [TiwulFX Dock](https://github.com/panemu/tiwulfx-dock]) <br/> ![stars](<https://shields.io/github/stars/panemu/tiwulfx-dock?style=social>) | `#controls`  | Enhanced `TabPane` that supports tab reordering, detaching and docking |
+| [TiwulFX Dock](https://github.com/panemu/tiwulfx-dock) <br/> ![stars](<https://shields.io/github/stars/panemu/tiwulfx-dock?style=social>) | `#controls`  | Enhanced `TabPane` that supports tab reordering, detaching and docking |
 | [UndoFX](https://github.com/fxmisc/UndoFX) <br/> ![stars](<https://shields.io/github/stars/fxmisc/UndoFX?style=social>) | `#base`  | A general-purpose undo manager |
 | [ValidatorFX](https://github.com/effad/ValidatorFX) <br/> ![stars](<https://shields.io/github/stars/effad/ValidatorFX?style=social>) | `#framework`  | A form validation library |
 | [VWorkflows](https://github.com/miho/VWorkflows) <br/> ![stars](<https://shields.io/github/stars/miho/VWorkflows?style=social>) | `#diagrams`  | Interactive flow/graph visualization for building domain specific visual programming environments |
